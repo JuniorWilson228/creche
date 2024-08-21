@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche José Laudir Pinheiro</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fundo preto */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background-image: url('https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/505ef496f217d04ecdc985950af28259/IMG_20240812_WA0008.jpg?token=0Mdy3G6piCoaU0M0y2_EYSiLUsH597oV6Kw-ozfcq0T6jNB8U2afjbHQQe5nNTz9UGhuIH_L02OQiJxTeWhb5x2SZ3zWJFdvBn5a01bPQnBquYcWOUSSwlSvXjlWsWXqfF_FY9KxxUvFQXAbvyQCSMR0wn_kZ9caBcLzrU7a_u0TR00Tg49YG7huR9eiGsQdE5LBgRp33mGIQUVb9dHI265G8FL9WdaVvjbNSfD8htZK93R9VvRUt8BEDeb7IMkt');
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Altura do cabeçalho */
+    color: white; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.content {
+    display: none;
+    padding: 20px;
+    background-color: #222;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+.active {
+    display: block;
+}
+.gallery img, .event img {
+    width: 100%;
+    max-width: 600px; /* Aumenta o tamanho das imagens */
+    margin: 10px auto; /* Margem superior e inferior para espaçamento e centralização */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.gallery img:hover, .event img:hover {
+    transform: scale(1.1);
+}
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+}
+.event-footer {
+    text-align: center;
+    margin: 20px 0;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin-top: auto; /* Mantém o rodapé no fundo */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+input, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background-color: #90EE90;
+    color: black;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #76c76c;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>Creche José Laudir Pinheiro</h1>
+</header>
+<nav>
+    <a href="#" onclick="showTab('home')">Início</a>
+    <a href="#" onclick="showTab('galeria')">Galeria</a>
+    <a href="#" onclick="showTab('eventos')">Eventos</a>
+    <a href="#" onclick="showTab('contato')">Contato</a>
+    <a href="#" onclick="showTab('jogos')">Jogos</a>
+</nav>
+<div id="home" class="content active">
+    <h2>Bem-vindo à Creche José Laudir Pinheiro!</h2>
+    <p>Aqui cuidamos do seu pequeno com muito carinho e dedicação. Para mais informações entre em contato com a nossa instituição!</p>
+</div>
+<div id="galeria" class="content">
+    <h2 class="section-title">Galeria</h2>
+    <div class="gallery">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/22b7bfdb90b0b52537ad0f9d54d1b6d7/joselaudir1.jpg?token=n0_8gOF0jXtd5WbfyeEJn6YaL6l9vlApea0oOFgqe-jLwR_cAOFuG4k21C4CIMFhKTwpx6LWRf6pUI4scO6GI-XfNPw-MoEEnJK1YcK-5CUg-Jl3gHFdKdJZooKT0Yhl3up_zxusm9qOpFomXsIbthI1_0sqdALT1fytqZYJ83LOmKGET7uRCM6JhMopSjYD-_JoI9_xVxXpyKVdEfR335dsuc-arJdfZzLJiHGjuBX-AemwS3UUenimEzKwMUCe" alt="Imagem 1">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/d25dae2b487bf2a80a2b0fe5b91ef8bf/FB_IMG_1718278035910.jpg?token=n0_8gOF0jXtd5WbfyeEJn6YaL6l9vlApea0oOFgqe-jLwR_cAOFuG4k21C4CIMFhKTwpx6LWRf6pUI4scO6GI-XfNPw-MoEEnJK1YcK-5CUg-Jl3gHFdKdJZooKT0Yhlqc4F1cQZYRucwvTVHTummH8xXpRrV_eWBW5ZqJeKu2h6yydPq2B4423Bsm-OwPcJOgIUklMlbnq07BhvyFUDyyAHp5xFIR4VDsuGYX3U31rAfrUUUjh7NWcRwiqVljAj" alt="Imagem 2">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/106f007bdacff28735735751ceaee77f/FB_IMG_1718279038555.jpg?token=n0_8gOF0jXtd5WbfyeEJn6YaL6l9vlApea0oOFgqe-jLwR_cAOFuG4k21C4CIMFhKTwpx6LWRf6pUI4scO6GI-XfNPw-MoEEnJK1YcK-5CUg-Jl3gHFdKdJZooKT0Yhlg9GcUoCh8PMCx41tkK76ipSBRumjwIU8MuDHtJtpmdttewYKTtlwk_WnUg7c6dwSmRxDszWqpL7dbBNISps62AaPffOPVRwikyS2PMRF-UevV6kZWWBDRfq_zk041XOe" alt="Imagem 3">
+    </div>
+</div>
+<div id="eventos" class="content">
+    <h2 class="section-title">Eventos</h2>
+    <div class="event">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/f79d7b8570c943289e84dfe01ae0f319/IMG_20240812_083235_1.jpg?token=0Mdy3G6piCoaU0M0y2_EYSiLUsH597oV6Kw-ozfcq0T6jNB8U2afjbHQQe5nNTz9UGhuIH_L02OQiJxTeWhb5x2SZ3zWJFdvBn5a01bPQnBquYcWOUSSwlSvXjlWsWXqvXMaKcFxV1qT9I_Gr_kzxyGIbne6ft2kKP1_x_DgNZxBnFNyLpeAe7bqVbRYK7sAFBQgGiVaH3UPLk5yvnMdnAZH2xluEbmI3C04yJpSSPH_-D4UWQJIXBwvq76VBULu" alt="Evento 1">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/7735454f376939dd15bcb46e9bfa782e/IMG_20240812_085431968_AE.jpg?token=0Mdy3G6piCoaU0M0y2_EYSiLUsH597oV6Kw-ozfcq0T6jNB8U2afjbHQQe5nNTz9UGhuIH_L02OQiJxTeWhb5x2SZ3zWJFdvBn5a01bPQnBquYcWOUSSwlSvXjlWsWXqBHoIIplX4WsAFNMxXPFpuXDC9lLhHFJsLzrWnbGWdU1t69-vCb3KCTy9VBGiMRIsruXSihlmzd_NZ5DvD-YxFegfFLshDj0ZCxpo6eR4pQYNl7MG7Qbr8NNDyPPasfMTCZJew0MnrnopqMrTKcfRBA==" alt="Evento 2">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/cac4d856667de64a420fe4a69dac822b/IMG_20240812_084349_1.jpg?token=0Mdy3G6piCoaU0M0y2_EYSiLUsH597oV6Kw-ozfcq0T6jNB8U2afjbHQQe5nNTz9UGhuIH_L02OQiJxTeWhb5x2SZ3zWJFdvBn5a01bPQnBquYcWOUSSwlSvXjlWsWXqcV9cX1V7T4SM2Tf5Wfe88uwpkxGVYmcCl4G2tVKmCDcR7JvCt_gaLAA5J3Z-O3v3FgHuhVz98gbEBtJ6uIGzfuiUdJU92KQdZiv1eW0Dhsqm8mSwAXn5l8IpGB72TWMn" alt="Evento 3">
+        <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2501876475/41a9eeb56f72b740744a07b262201fc7/IMG_20240812_084819.jpg?token=0Mdy3G6piCoaU0M0y2_EYSiLUsH597oV6Kw-ozfcq0T6jNB8U2afjbHQQe5nNTz9UGhuIH_L02OQiJxTeWhb5x2SZ3zWJFdvBn5a01bPQnBquYcWOUSSwlSvXjlWsWXqReI7EauhEJ9iv0rHIQJ2xxSplVkoSbg4bDEe-OGWprLSxeMvMHgAYPfuqLR1zLz9Yg6wYsktu28xMSsBhRKibVk4SayzIbyRc8zuAnaaYv37WsoqEF8MO1FfDriapWWF" alt="Evento 4">
+        <div class="event-footer">Evento entrega dos livros</div>
+    </div>
+</div>
+<div id="jogos" class="content">
+<h2>Aqui alguns jogos educativos!</h2>
+<img src="https://tainacan.eci.ufmg.br/lorenatavares/wp-content/uploads/sites/17/2020/10/silabando.jpg" width="200" height="200" alt="Imagem 1">
+<p>Silabando</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.appsbergman.silabando&hl=pt_BR&pli=1" target="_blank">clique aqui</a>.</p>
+<img src="https://play-lh.googleusercontent.com/r57t2kbW40DuwEZZSu8miUYTRNXMA424fcS7TY-YudFVAvw4k28DcRsXqJgYZ4zH3g" width="200" height="200" alt="Imagem 2">
+<p>Ler e contar</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.bergman.lerecontar&hl=pt_BR" target="_blank">clique aqui</a>.</p>
+</div>
+<div id="contato" class="content">
+<h1>Nossas Informações</h1>
+<div class="info">
+<span class="label">Diretor</span> Valter Pinheiro Nogueira
+</div>
+<div class="info">
+<span class="label">Número:</span> +55 88 9651-4634
+</div>
+
+<div class="info">
+<span class="label">Endereço:</span> Rua Santa Tereza, Solonópole, CE, CEP 63620-000
+</div>
+</div>
+<footer>
+<p>&copy; Creche José Laudir. Todos os direitos reservados.</p>
+</footer>
+<script>
+function showTab(tabId) {
+const tabs = document.querySelectorAll('.content');
+tabs.forEach(tab => {
+tab.classList.remove('active');
+});
+document.getElementById(tabId).classList.add('active');
+}
+</script>
+</body>
+</html>
